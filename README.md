@@ -14,7 +14,20 @@ It automatically **collects, enriches, scores, and visualizes** security alerts 
 * 🧰 **SOC Simulation** – Mimics a Tier 1 Analyst environment for training and demonstrations.
 
 ---
+### 📸 Preview
 
+#### Main Dashboard
+
+<img width="1844" height="799" alt="Screenshot 2025-11-02 014157" src="https://github.com/user-attachments/assets/3ed5afa7-0d25-4db1-abb0-28aa7a7d4f69" />
+
+
+#### Quick Summary View
+
+<img width="1521" height="786" alt="Screenshot 2025-11-02 014205" src="https://github.com/user-attachments/assets/552a5375-3ef0-4ede-b57c-0d7de580aa86" />
+
+#### Filtered Alerts
+
+<img width="1840" height="424" alt="Screenshot 2025-11-02 014222" src="https://github.com/user-attachments/assets/2e8db6e1-985a-42da-9190-b0b94ad47837" />
 
 ---
 
